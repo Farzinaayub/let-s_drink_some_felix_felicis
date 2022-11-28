@@ -8,13 +8,67 @@ The image classification model is trained with 2 postures of yoga. The dataset u
 
 The ultimate aim of the project is to display the coordinates, predicted goal posture, instructions to improve and pose time.
 ## 2.Proof of concept
+
 Finding some time to take care of health is not the only problem. We can find some time and do it at home. But wrongly stretching the body or doing incorrect asanas and breathing in an incorrect manner while exercising, can be detrimental to health.  
 
 Incorrect postures could lead to acute pain and long-standing chronic problems. Making use of videos also cannot solve the problem until we get an active trainer that can correct us when we go wrong. 
 
  Here comes our yoga assistant to guide you real time. It can predict the posture you are trying to make and guide you to the best posture. It also tracks your activity by showing the pose time, the duration you retain in a particular pose 
  ## 3.Implementation
+ 
  The project is implemented by making use of several libraries and techniques. The image dataset is prepared by getting massive number of images from Google browser. The image dataset is preprocessed and given for training. The dataset is split to train, validation and test dataset. A deep learning model is built and is trained by the dataset preprocessed. The plot for loss and accuracy is drawn. The model trained is evaluated by using the test dataset.  Using the mediapipe and open cv library the pose is estimated and x, y coordinates are collected.  
  ### 3.1 System Architecture
+ 
  The system architecture is: - The dataset is imported initially from drive and a convolutional neural network is trained by the dataset. An image classification model is thus built and saved for pose prediction. Pose estimation of the input image is done.  
 The ‘x’, ‘y’ coordinates are thus got to use for calculating angles later. From the predicted pose, an image/video of goal posture is to be displayed. Using the angle between concerned points, connected by a line, of a particular posture is used for generating instructions. A timer displays the time the user retained in a particular pose. 
+### 3.2 	Dataset 
+
+The dataset is the collection of images of 2 yoga postures such as ‘vrikshasana’ and ‘Sidhasana’. ‘vrikshasana’ is a type of standing tree pose and Sidhasana is a sitting meditating pose. The dataset ‘yoga_poses’ comprises of 70-90 images of each of the class. 
+
+### 3.3 	Modules 
+
+#### 3.3.1 Building the model 
+
+##### Preprocessing 
+
+The dataset is preprocessed by eliminating the images with files names ending not with .PNG/.jpg. The images having size fewer than 10 kb are also removed. The dataset is scaled and split into train, validation and test datasets in the ratio 70:20:10. 
+
+##### Training 
+
+A deep learning model is built using Convolutional neural network which is widely used for image/object recognition and classification. The network is trained with the train dataset and accuracy is got using validation dataset. 
+
+##### Visualization 
+
+Data visualization is defined as to evaluate the performance of a model by using graphs and metrics that calculate performance. The loss and accuracy plot is drawn. 
+
+##### Evaluation 
+
+The model is evaluated against the test dataset to crosscheck whether the prediction is right or not.  
+
+##### Saving the model 
+
+The model is now ready to be deployed now 
+
+#### 3.3.2 Pose Estimation 
+
+ 	The input is actually obtained from the local webcam. The frames from the input video are given as the input for pose estimation using MediaPipe. MediaPipe Pose is an ML solution for high-fidelity body pose tracking, inferring 33 3D landmarks and background segmentation mask on the whole body from RGB video frames. 
+
+pose_tracking_full_body_landmarks.png 
+
+33 pose landmarks.
+ 
+#### 3.3.3 Instructions Generations 
+
+The user doing yoga is guided by generated instructions from the web app. In order to generate the instructions, the pose is checked for the angles between joints for a particular yoga posture. 
+
+#### 3.3.4 Timer 
+
+As the yoga pose the user is trying to do is predicted, a timer starts. It displays the time the user retained in the pose in seconds. 
+
+### 3.4	Algorithm 
+
+#### Convolutional Neural Network 
+
+A Convolutional Neural Network, also known as CNN or ConvNet, is a class of neural networks that specializes in processing data that has a grid-like topology, such as an image. A digital image is a binary representation of visual data. It contains a series of pixels arranged in a grid-like fashion that contains pixel values to denote how bright and what color each pixel should be. 
+
+The human brain processes a huge amount of information the second we see an image. Each neuron works in its own receptive field and is connected to other neurons in a way that they cover the entire visual field. Just as each neuron responds to stimuli only in the restricted region of the visual field called the receptive field in the biological vision system, each neuron in a CNN processes data only in its receptive field as well. The layers are arranged in such a way so that they detect simpler patterns first (lines, curves, etc.) and more complex patterns (faces, objects, etc.) further along. By using a CNN, one can enable sight to computers. 
