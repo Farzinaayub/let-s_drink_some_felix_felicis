@@ -94,25 +94,34 @@ By using the same pose estimation technique and image classification algorithm, 
 
 Here I add some sample screenshots of the proposed system which includes, 
 
-Accuracy and loss plot 
+-Accuracy and loss plot 
 
-Accuracy percentage 
+-Accuracy percentage 
 
-Pose estimation 
-
- 
+-Pose estimation 
 
  
-
+<p align="center">
+<img src="acc.png"/>
+<br>
 Figure 7.1: Accuracy 
- 
-
-Figure 7.2: visualization of loss and accuracy 
-
- 
-
-Figure 7.3:  pose estimation 
+</p>
 
 
+<p align="center">
+<img src="loss.png"/>
+<br>
+Figure 7.2: Loss 
+</p>
 
-Figure 7.4: Screenshot of webapp  
+
+<p align="center">
+<img src="fz.png"/>
+Figure 7.3: vrikshasana 
+</p>
+
+
+<p align="center">
+<img src="cz.png"/>
+Figure 7.4:Sidhasana
+</p>
