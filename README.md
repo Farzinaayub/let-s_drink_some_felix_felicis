@@ -51,7 +51,7 @@ The model is now ready to be deployed now
 
 #### 3.3.2 Pose Estimation 
 
- 	The input is actually obtained from the local webcam. The frames from the input video are given as the input for pose estimation using MediaPipe. MediaPipe Pose is an ML solution for high-fidelity body pose tracking, inferring 33 3D landmarks and background segmentation mask on the whole body from RGB video frames. 
+The input is actually obtained from the local webcam. The frames from the input video are given as the input for pose estimation using MediaPipe. MediaPipe Pose is an ML solution for high-fidelity body pose tracking, inferring 33 3D landmarks and background segmentation mask on the whole body from RGB video frames. 
 
 pose_tracking_full_body_landmarks.png 
 
@@ -71,4 +71,48 @@ As the yoga pose the user is trying to do is predicted, a timer starts. It displ
 
 A Convolutional Neural Network, also known as CNN or ConvNet, is a class of neural networks that specializes in processing data that has a grid-like topology, such as an image. A digital image is a binary representation of visual data. It contains a series of pixels arranged in a grid-like fashion that contains pixel values to denote how bright and what color each pixel should be. 
 
-The human brain processes a huge amount of information the second we see an image. Each neuron works in its own receptive field and is connected to other neurons in a way that they cover the entire visual field. Just as each neuron responds to stimuli only in the restricted region of the visual field called the receptive field in the biological vision system, each neuron in a CNN processes data only in its receptive field as well. The layers are arranged in such a way so that they detect simpler patterns first (lines, curves, etc.) and more complex patterns (faces, objects, etc.) further along. By using a CNN, one can enable sight to computers. 
+The human brain processes a huge amount of information the second we see an image. Each neuron works in its own receptive field and is connected to other neurons in a way that they cover the entire visual field. Just as each neuron responds to stimuli only in the restricted region of the visual field called the receptive field in the biological vision system, each neuron in a CNN processes data only in its receptive field as well. The layers are arranged in such a way so that they detect simpler patterns first (lines, curves, etc.) and more complex patterns (faces, objects, etc.) further along. By using a CNN, one can enable sight to computers.
+
+## 4.Result Analysis 
+
+The result of the proposed project ML based yoga assistant is a web app that live streams from the webcam and draw pose estimates over the frame. 
+The input of the proposed project is just the video input obtained through local webcam and the output is the predicted pose name, goal image, and time retained in pose. 
+
+## 5.Conclusion and future scope
+
+### 5.1	Conclusion 
+
+The conclusion of the project is to provide a solution to have a virtual yoga assistant at home or office, wherever you are. By using a trained model for image classification, it will predict, to which class the frame from the video input belongs to. By calculating the angles between the lines joining the concerned landmarks, instructions to improve the posture is generated. 
+
+ 
+
+### 5.2	Future Scope 
+
+By using the same pose estimation technique and image classification algorithm, it is possible to develop computer vision systems that can be a trainer for equipment less workouts, physiotherapy, gait analysis etc. 
+
+## 6.Screenshots 
+
+Here I add some sample screenshots of the proposed system which includes, 
+
+Accuracy and loss plot 
+
+Accuracy percentage 
+
+Pose estimation 
+
+ 
+
+ 
+
+Figure 7.1: Accuracy 
+ 
+
+Figure 7.2: visualization of loss and accuracy 
+
+ 
+
+Figure 7.3:  pose estimation 
+
+
+
+Figure 7.4: Screenshot of webapp  
